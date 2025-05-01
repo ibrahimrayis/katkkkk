@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ShoppingCart, User, Baby, Shirt } from 'lucide-react';
+import { ShoppingCart, User, Shirt } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,15 +8,28 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 const languages = [
   { code: 'en', name: 'English' },
-  { code: 'es', name: 'Español' },
-  { code: 'fr', name: 'Français' },
+  { code: 'ar', name: 'العربية' },
 ];
 
 const Navbar = () => {
-  const [currentLang, setCurrentLang] = useState('en');
+  const { t, i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language);
+
+  useEffect(() => {
+    // Apply RTL direction for Arabic
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
+  const changeLanguage = (code: string) => {
+    i18n.changeLanguage(code);
+    setCurrentLang(code);
+  };
 
   return (
     <nav className="bg-white shadow-md py-4">
@@ -30,11 +43,11 @@ const Navbar = () => {
 
           {/* Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">Home</a>
-            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">Shop</a>
-            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">New Arrivals</a>
-            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">About</a>
-            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">Contact</a>
+            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.home')}</a>
+            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.shop')}</a>
+            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.newArrivals')}</a>
+            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.about')}</a>
+            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.contact')}</a>
           </div>
 
           {/* Icons & Language */}
@@ -49,8 +62,8 @@ const Navbar = () => {
                 {languages.map((lang) => (
                   <DropdownMenuItem 
                     key={lang.code} 
-                    onClick={() => setCurrentLang(lang.code)}
-                    className="hover:bg-kidstore-green/20 rounded-lg cursor-pointer"
+                    onClick={() => changeLanguage(lang.code)}
+                    className={`hover:bg-kidstore-green/20 rounded-lg cursor-pointer ${currentLang === lang.code ? 'bg-kidstore-green/10' : ''}`}
                   >
                     {lang.name}
                   </DropdownMenuItem>

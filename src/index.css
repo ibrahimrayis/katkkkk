@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -71,5 +72,28 @@
   
   .category-card {
     @apply flex flex-col items-center p-4 rounded-2xl transition-all duration-300 hover:-translate-y-2;
+  }
+  
+  /* RTL specific styles */
+  .rtl {
+    direction: rtl;
+    font-family: 'Cairo', 'Bubblegum Sans', sans-serif;
+  }
+  
+  .rtl .dropdown-menu {
+    text-align: right;
+  }
+  
+  /* Fix spacing in RTL mode */
+  .rtl .space-x-8 > * + * {
+    --tw-space-x-reverse: 1;
+  }
+  
+  .rtl .space-x-4 > * + * {
+    --tw-space-x-reverse: 1;
+  }
+  
+  .rtl .space-x-2 > * + * {
+    --tw-space-x-reverse: 1;
   }
 }

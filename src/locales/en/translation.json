@@ -1,0 +1,39 @@
+
+{
+  "navbar": {
+    "home": "Home",
+    "shop": "Shop",
+    "newArrivals": "New Arrivals",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "categories": {
+    "title": "Categories",
+    "age": "Age",
+    "gender": "Gender",
+    "trend": "Trend",
+    "budget": "Budget"
+  },
+  "featuredProducts": {
+    "title": "Featured Products",
+    "seeMore": "See More"
+  },
+  "hero": {
+    "title1": "Cartoon",
+    "title2": "Cuteness for",
+    "title3": "Little Ones!",
+    "description": "Discover our playful collection of kids' clothing and accessories that bring cartoon characters to life!",
+    "shopNow": "Shop Now",
+    "viewCollections": "View Collections"
+  },
+  "footer": {
+    "about": "About Us",
+    "contact": "Contact Us",
+    "shipping": "Shipping & Returns",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "subscribe": "Subscribe to our newsletter",
+    "subscribeButton": "Subscribe",
+    "rights": "All rights reserved"
+  }
+}

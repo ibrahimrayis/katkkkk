@@ -1,7 +1,10 @@
 
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative bg-gradient-to-b from-kidstore-blue/30 to-kidstore-purple/30 py-16 overflow-hidden">
       {/* Decorative Elements */}
@@ -14,19 +17,19 @@ const Hero = () => {
           {/* Text Content */}
           <div className="lg:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
-              <span className="text-kidstore-blue block animate-float">Cartoon</span>
-              <span className="text-kidstore-pink block mt-2 animate-float" style={{ animationDelay: "0.5s" }}>Cuteness for</span>
-              <span className="text-kidstore-purple block mt-2 animate-float" style={{ animationDelay: "1s" }}>Little Ones!</span>
+              <span className="text-kidstore-blue block animate-float">{t('hero.title1')}</span>
+              <span className="text-kidstore-pink block mt-2 animate-float" style={{ animationDelay: "0.5s" }}>{t('hero.title2')}</span>
+              <span className="text-kidstore-purple block mt-2 animate-float" style={{ animationDelay: "1s" }}>{t('hero.title3')}</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-lg">
-              Discover our playful collection of kids' clothing and accessories that bring cartoon characters to life!
+              {t('hero.description')}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button className="bg-kidstore-pink hover:bg-kidstore-pink/80 text-white kidstore-button px-8 py-6">
-                Shop Now
+                {t('hero.shopNow')}
               </Button>
               <Button variant="outline" className="border-kidstore-blue text-kidstore-blue hover:bg-kidstore-blue/10 kidstore-button px-8 py-6">
-                View Collections
+                {t('hero.viewCollections')}
               </Button>
             </div>
           </div>
