@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const languages = [
   { code: 'en', name: 'English' },
@@ -19,6 +20,7 @@ const languages = [
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [currentLang, setCurrentLang] = useState(i18n.language);
+  const location = useLocation();
 
   useEffect(() => {
     // Apply RTL direction for Arabic
@@ -31,19 +33,33 @@ const Navbar = () => {
     setCurrentLang(code);
   };
 
+  // Function to check if the current route is active
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
     <nav className="bg-white shadow-md py-4">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Shirt className="h-8 w-8 text-kidstore-blue" />
-            <span className="text-2xl font-bold text-kidstore-pink animate-wiggle">KATKOOTA</span>
+            <Link to="/">
+              <div className="flex items-center space-x-2">
+                <Shirt className="h-8 w-8 text-kidstore-blue" />
+                <span className="text-2xl font-bold text-kidstore-pink animate-wiggle">KATKOOTA</span>
+              </div>
+            </Link>
           </div>
 
           {/* Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.home')}</a>
+            <Link 
+              to="/" 
+              className={`font-medium transition-colors duration-300 ${isActive('/') ? 'text-kidstore-blue' : 'text-gray-700 hover:text-kidstore-blue'}`}
+            >
+              {t('navbar.home')}
+            </Link>
             <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.shop')}</a>
             <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.newArrivals')}</a>
             <a href="#" className="text-gray-700 hover:text-kidstore-blue font-medium transition-colors duration-300">{t('navbar.about')}</a>
@@ -71,9 +87,21 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <User className="h-5 w-5 text-gray-700" />
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  <User className="h-5 w-5 text-gray-700" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-white rounded-xl shadow-lg p-2">
+                <DropdownMenuItem className="hover:bg-kidstore-green/20 rounded-lg cursor-pointer">
+                  <Link to="/login" className="w-full">{t('navbar.login')}</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-kidstore-green/20 rounded-lg cursor-pointer">
+                  <Link to="/signup" className="w-full">{t('navbar.signup')}</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             
             <Button variant="ghost" size="icon" className="rounded-full relative">
               <ShoppingCart className="h-5 w-5 text-gray-700" />

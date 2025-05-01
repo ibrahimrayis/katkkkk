@@ -5,35 +5,99 @@
     "shop": "المتجر",
     "newArrivals": "وصل حديثاً",
     "about": "من نحن",
-    "contact": "اتصل بنا"
-  },
-  "categories": {
-    "title": "التصنيفات",
-    "age": "العمر",
-    "gender": "الجنس",
-    "trend": "الاتجاهات",
-    "budget": "السعر"
-  },
-  "featuredProducts": {
-    "title": "منتجات مميزة",
-    "seeMore": "المزيد"
+    "contact": "اتصل بنا",
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب"
   },
   "hero": {
-    "title1": "كرتون",
-    "title2": "لطيف لـ",
-    "title3": "الصغار!",
-    "description": "اكتشف مجموعتنا المرحة من ملابس الأطفال والإكسسوارات التي تجلب شخصيات الكرتون للحياة!",
+    "title": "أزياء رائعة للنجوم الصغار",
+    "subtitle": "اكتشف تشكيلات ملابسنا الكرتونية للأطفال من جميع الأعمار",
     "shopNow": "تسوق الآن",
-    "viewCollections": "عرض المجموعات"
+    "exploreCollections": "استكشف المجموعات"
+  },
+  "categories": {
+    "title": "تسوق حسب الفئة",
+    "subtitle": "اعثر على ملابس مثالية لكل مناسبة",
+    "boys": "الأولاد",
+    "girls": "البنات",
+    "babies": "الأطفال الرضع",
+    "accessories": "الإكسسوارات",
+    "footwear": "الأحذية",
+    "viewAll": "عرض الكل"
+  },
+  "featured": {
+    "title": "المنتجات المميزة",
+    "subtitle": "أكثر منتجاتنا شعبية المحبوبة من الأطفال والآباء",
+    "viewAll": "عرض جميع المنتجات"
   },
   "footer": {
     "about": "من نحن",
+    "careers": "وظائف",
+    "press": "الصحافة",
+    "blog": "المدونة",
     "contact": "اتصل بنا",
-    "shipping": "الشحن والإرجاع",
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
+    "shipping": "الشحن والإرجاع",
+    "faq": "الأسئلة الشائعة",
+    "help": "المساعدة والدعم",
+    "storeLocator": "موقع المتجر",
+    "orderTracking": "تتبع الطلب",
     "subscribe": "اشترك في نشرتنا الإخبارية",
+    "emailPlaceholder": "عنوان بريدك الإلكتروني",
     "subscribeButton": "اشترك",
-    "rights": "جميع الحقوق محفوظة"
+    "socialMedia": "تابعنا",
+    "copyright": "جميع الحقوق محفوظة."
+  },
+  "login": {
+    "title": "تسجيل الدخول",
+    "enterCredentials": "أدخل بيانات الاعتماد الخاصة بك للوصول إلى حسابك",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "login": "تسجيل الدخول",
+    "loggingIn": "جارٍ تسجيل الدخول...",
+    "orContinueWith": "أو تابع باستخدام",
+    "continueWithFacebook": "متابعة باستخدام فيسبوك",
+    "continueWithGithub": "متابعة باستخدام جيثب",
+    "continueWithInstagram": "متابعة باستخدام انستغرام",
+    "noAccount": "ليس لديك حساب؟",
+    "signUp": "إنشاء حساب",
+    "success": "تم تسجيل الدخول بنجاح",
+    "welcomeBack": "مرحبا بك مجددا في كتكوتة!",
+    "socialLoginAttempt": "تسجيل الدخول الاجتماعي",
+    "attemptingWith": "محاولة تسجيل الدخول باستخدام"
+  },
+  "signup": {
+    "title": "إنشاء حساب",
+    "createAccount": "أنشئ حسابًا للبدء",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "أنشئ كلمة مرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "confirmPasswordPlaceholder": "أكد كلمة المرور",
+    "acceptTerms": "أقبل",
+    "termsAndConditions": "الشروط والأحكام",
+    "signup": "إنشاء حساب",
+    "creatingAccount": "جاري إنشاء الحساب...",
+    "orContinueWith": "أو تابع باستخدام",
+    "continueWithFacebook": "متابعة باستخدام فيسبوك",
+    "continueWithGithub": "متابعة باستخدام جيثب",
+    "continueWithInstagram": "متابعة باستخدام انستغرام",
+    "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+    "login": "تسجيل الدخول",
+    "success": "تم التسجيل بنجاح",
+    "accountCreated": "تم إنشاء حسابك!",
+    "passwordMismatch": "كلمات المرور غير متطابقة",
+    "passwordsMustMatch": "يجب أن تتطابق كلمات المرور",
+    "termsRequired": "الشروط مطلوبة",
+    "pleaseAcceptTerms": "يرجى قبول الشروط والأحكام",
+    "socialSignupAttempt": "التسجيل الاجتماعي",
+    "attemptingWith": "محاولة التسجيل باستخدام"
   }
 }
