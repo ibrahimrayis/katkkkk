@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Shirt className="h-8 w-8 text-kidstore-blue" />
-              <span className="text-xl font-bold text-kidstore-pink">Kiddie Carton Corner</span>
+              <span className="text-xl font-bold text-kidstore-pink">KATKOOTA</span>
             </div>
             <p className="text-gray-600 mb-4">
               Your one-stop shop for adorable cartonized clothing and accessories for kids of all ages.
@@ -80,7 +80,7 @@ const Footer = () => {
         
         {/* Copyright */}
         <div className="border-t border-gray-200 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Kiddie Carton Corner. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} KATKOOTA. All rights reserved.</p>
         </div>
       </div>
     </footer>

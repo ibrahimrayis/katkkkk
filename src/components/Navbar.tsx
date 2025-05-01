@@ -38,7 +38,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Shirt className="h-8 w-8 text-kidstore-blue" />
-            <span className="text-2xl font-bold text-kidstore-pink animate-wiggle">Kiddie Carton Corner</span>
+            <span className="text-2xl font-bold text-kidstore-pink animate-wiggle">KATKOOTA</span>
           </div>
 
           {/* Navigation */}
